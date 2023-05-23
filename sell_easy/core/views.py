@@ -38,7 +38,21 @@ def store_page(stores):
         page +=f"<li><h1>{store.name}</h1><h2>{store.tagline}</h2><p>{store.owner.username}, Welcome</p</li>"
         page +='<ul>'
     return page"""
+def home(request):
+    products = Product.objects.all()
+    best_selling_products = products.filter('-price')[:4]
+    products = products[:8]
+    categories = Category.objects.all()[:4]
+    stores = Store.objects.all()
 
+    context={
+        'products':products,
+        'categories':categories,
+        'stores':stores,
+        'best_selling_products':best_selling_products,
+        
+
+    }
 def products(request):
     products = Product.objects.all()
     categories = Category.objects.all()

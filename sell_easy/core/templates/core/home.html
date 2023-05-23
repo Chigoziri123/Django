@@ -1,8 +1,48 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ title }}{% endblock %}
+{% load static%}
+{% block title %}Home Page{% endblock %}
 
 {% block content %}
+    {# BANNER SECTION #}
+    <section>
+        <img src="">
+    </section>
+    {# CATEGORY SECTION #}
+    <section>
+        <div class="section-heading">
+            <h2>Product Categories</h2>
+            <div class="view-all">
+                <a href="{% url 'products' %}"<p>View all</p>/>
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+
+        <div class="section-grid">
+            {% for product in products%}
+            <div class=""></div>
+
+        </div>
+    </section>
+    {# PRODUCTS SECTION #}
+    <section>
+        PRODUCTS
+    </section>
+{# DISCOUNT SECTION #}
+    <section>
+        <div>
+
+        </div>
+    </section>
+    {# BEST SELLERS SECTION #}
+    <section>
+        BEST SELLERS
+    </section>
+    {# STORES SECTION #}
+    <section>
+        STORES
+    </section>
+        
     <h1>{{ title }}</h1>
     <p>{{ content }}</p>
 {% endblock %}

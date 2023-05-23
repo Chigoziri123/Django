@@ -3,6 +3,9 @@ from core.account import views as account_views
 from . import views
 
 urlpatterns = [
+
+    #CORE APP VIEWS
+    path('', views.home, name="home"),
     path('products', views.products, name = "products"),
     path('products/<int:id>', views.product, name = "product"),   
     path('stores', views.stores, name = "stores"),

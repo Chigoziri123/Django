@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib import admin
 from core.account.models import Profile
 from django.core.validators import MaxValueValidator, MinValueValidator
 
